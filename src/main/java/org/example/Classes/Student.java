@@ -1,14 +1,37 @@
 package org.example.Classes;
 
 public class Student {
-    // Instance Fields
-    String name;
-    int age;
+    // attribute
+    // student.id
+    private int id;
+    private String name;
+    private double score;
 
-    double score;
+    public Student(int id, String name, double score) {
+        this.id = id;
+        this.name = name;
+        this.score = score;
+    }
 
-    // Constructor Here
-    // Think of it like a recipe for creating a student
+    // Method (Behavior)
+    public void greet(Student someone) {
+        System.out.println(name + " hello! " + someone.name);
+    }
 
-    // Methods Here
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Setter & Getter
+    public int getId(){
+        return this.id  ;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
 }

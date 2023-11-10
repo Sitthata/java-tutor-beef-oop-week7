@@ -1,5 +1,7 @@
 # The Magical Food Emporium Project
 
+---
+
 ## Project Description
 In this project, you will create a Java program for "The Magical Food Emporium," a whimsical shop in the town of Byteville. Your program will help manage the store's magical menu, handle customer orders, and calculate bills. As a budding programmer, your challenge is to bring magic to Merlin's shop through code!
 
