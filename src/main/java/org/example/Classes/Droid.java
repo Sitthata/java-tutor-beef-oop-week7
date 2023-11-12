@@ -9,6 +9,8 @@ public class Droid {
      */
     private String name;
     private int batteryLevel;
+    static int LEG = 2;
+
 
     // Constructor
     public Droid(String name) {
@@ -30,21 +32,36 @@ public class Droid {
 
     // Methods
     // performTask(String task)
+    // name + " is performing " + task
     public void performTask(String task) {
-        if (batteryLevel !=0 && batteryLevel > 0) {
-            System.out.println(name + task);
+        // Check if battery is more than 0
+        if (batteryLevel > 0) {
+            System.out.println(name + " is performing " + task);
             batteryLevel -= 20;
-            return;
+        } else {
+            System.out.println("error");
+            batteryLevel = 0;
         }
-        System.out.println("battery 0 Cody is running out of battery");
+        // Perform task
+        // if battery < 0 - Error
     }
 
-    // d1.performTask("grocery")
-    // Cody is performing grocery -= 20
-    // battery 0 Cody is running out of battery
-
-
     // chargeBattery()
+    public void chargeBattery() {
+        batteryLevel = 100;
+    }
 
     // droidInfo()
+    public void droidInfo() {
+        System.out.println(name + " : " + batteryLevel);
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Droid{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", batteryLevel=").append(batteryLevel);
+        sb.append('}');
+        return sb.toString();
+    }
 }
